@@ -3,4 +3,4 @@
         'pkgs': ['locales'],
     },
 
-}, grain='os', merge=salt['pillar.get']('locale:lookup')) %}
+}, grain='os_family', merge=salt['pillar.get']('locale:lookup')) %}
