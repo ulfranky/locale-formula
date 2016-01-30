@@ -2,5 +2,14 @@
     'Debian': {
         'pkgs': ['locales'],
     },
+    'Arch': {
+        'pkgs': ['glibc'],
+    },
+    'Suse': {
+        'pkgs': ['glibc-locale'],
+    },
+    'RedHat': {
+      	'pkgs': ['glibc-common'],
+    },
 
 }, grain='os_family', merge=salt['pillar.get']('locale:lookup')) %}
