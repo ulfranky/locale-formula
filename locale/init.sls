@@ -27,11 +27,9 @@ locale_default:
 {% endif %}
 
 {%- set conf = salt['pillar.get']('locale:conf', {}) %}
-{%- if conf is iterable %}
+{%- if conf %}
 locale-conf-is-setup:
   file.managed:
     - name: /etc/locale.conf
     - contents_pillar: locale:conf
-{% else %}
 {% endif %}
-
