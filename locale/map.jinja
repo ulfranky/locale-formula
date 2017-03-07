@@ -1,4 +1,6 @@
-{% set map = salt['grains.filter_by']({
+{% import_yaml 'locale/defaults.yaml' as default_settings %}
+
+{% set os_family_map = salt['grains.filter_by']({
     'Debian': {
         'pkgs': ['locales'],
     },
@@ -13,3 +15,12 @@
     },
 
 }, grain='os_family', merge=salt['pillar.get']('locale:lookup')) %}
+
+{% do default_settings.locale.update(os_family_map) %}
+
+{% set locale = salt['pillar.get'](
+        'locale',
+        default=default_settings.locale,
+        merge=True
+    )
+%}

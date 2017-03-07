@@ -1,0 +1,4 @@
+locale:
+  config: '/etc/locale.conf'
+  pkgs: []
+  present: []

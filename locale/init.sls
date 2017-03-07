@@ -1,35 +1,33 @@
 # Installs and configures system locales
 
-{% from "locale/map.jinja" import map with context %}
+{% from "locale/map.jinja" import locale with context %}
 
+{% if locale.pkgs is iterable %}
 locale_pkgs:
   pkg.installed:
     - pkgs:
-      {%- for pkg in map.pkgs %}
+      {%- for pkg in locale.pkgs %}
         - {{ pkg }}
       {% endfor %}
-
-{%- set locales = salt['pillar.get']('locale:present', []) %}
-{%- set default = salt['pillar.get']('locale:default', 'en_US.UTF-8') %}
-
-{%- for locale in locales %}
-locale_present_{{ locale|replace('.', '_')|replace(' ', '_') }}:
-  locale.present:
-    - name: {{ locale }}
-{%- endfor %}
-
-{% if default is mapping %}
-locale_default:
-  locale.system:
-    - name: {{ default.name }}
-    - require:
-      - locale: locale_present_{{ default.requires|replace('.', '_')|replace(' ', '_') }}
 {% endif %}
 
-{%- set conf = salt['pillar.get']('locale:conf', {}) %}
-{%- if conf %}
-locale-conf-is-setup:
+{%- for l in locale.present %}
+locale_present_{{ l|replace('.', '_')|replace(' ', '_') }}:
+  locale.present:
+    - name: {{ l }}
+{%- endfor %}
+
+{% if locale.default is defined %}
+locale_default:
+  locale.system:
+    - name: {{ locale.default.name }}
+    - require:
+      - locale: locale_present_{{ locale.default.requires|replace('.', '_')|replace(' ', '_') }}
+{% endif %}
+
+{%- if locale.conf is defined %}
+locale_conf:
   file.managed:
-    - name: /etc/locale.conf
+    - name: {{ locale.config }}
     - contents_pillar: locale:conf
 {% endif %}
