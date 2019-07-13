@@ -76,11 +76,8 @@ platforms:
     driver:
       image: netmanagers/salt-2018.3-py2:fedora-29
     provisioner:
-      pillars:
-        locale.sls:
-          locale:
-            pkgs:
-              - glibc-langpack-de
+      pillars_from_files:
+        locale.sls: test/salt/pillar/fedora.sls
 
   # TODO: Use this when fixed instead of `opensuse-leap-42`
   # Ref: https://github.com/netmanagers/salt-image-builder/issues/2
@@ -130,11 +127,8 @@ provisioner:
       base:
         '*':
           - locale
-    locale.sls:
-      locale:
-        present:
-          - "en_US.UTF-8 UTF-8"
-          - "de_DE.UTF-8 UTF-8"
+  pillars_from_files:
+    locale.sls: test/salt/pillar/default.sls
 
 verifier:
   # https://www.inspec.io/
