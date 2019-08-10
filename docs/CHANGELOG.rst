@@ -2,6 +2,15 @@
 Changelog
 =========
 
+`0.3.0 <https://github.com/saltstack-formulas/locale-formula/compare/v0.2.2...v0.3.0>`_ (2019-08-10)
+--------------------------------------------------------------------------------------------------------
+
+Features
+^^^^^^^^
+
+
+* **yamllint:** include for this repo and apply rules throughout (\ `5cdb75e <https://github.com/saltstack-formulas/locale-formula/commit/5cdb75e>`_\ )
+
 `0.2.2 <https://github.com/saltstack-formulas/locale-formula/compare/v0.2.1...v0.2.2>`_ (2019-07-13)
 --------------------------------------------------------------------------------------------------------
 
