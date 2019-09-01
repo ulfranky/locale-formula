@@ -2,6 +2,21 @@
 Changelog
 =========
 
+`0.3.1 <https://github.com/saltstack-formulas/locale-formula/compare/v0.3.0...v0.3.1>`_ (2019-09-01)
+--------------------------------------------------------------------------------------------------------
+
+Code Refactoring
+^^^^^^^^^^^^^^^^
+
+
+* **pillar:** sync map.jinja with template-formula (\ `9fe13b4 <https://github.com/saltstack-formulas/locale-formula/commit/9fe13b4>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen+travis:** replace EOL pre-salted images (\ `1e5fde3 <https://github.com/saltstack-formulas/locale-formula/commit/1e5fde3>`_\ )
+
 `0.3.0 <https://github.com/saltstack-formulas/locale-formula/compare/v0.2.2...v0.3.0>`_ (2019-08-10)
 --------------------------------------------------------------------------------------------------------
 
