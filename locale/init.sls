@@ -1,6 +1,11 @@
-# Installs and configures system locales
+# -*- coding: utf-8 -*-
+# vim: ft=sls
 
-{% from "locale/map.jinja" import locale with context %}
+{#- Get the `tplroot` from `tpldir` #}
+{%- set tplroot = tpldir.split('/')[0] %}
+{%- from tplroot ~ "/map.jinja" import locale with context %}
+
+# Installs and configures system locales
 
 {% if locale.pkgs is iterable %}
 locale_pkgs:
