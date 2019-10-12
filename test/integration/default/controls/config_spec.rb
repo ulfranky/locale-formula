@@ -1,5 +1,6 @@
-control 'Locale configuration' do
+# frozen_string_literal: true
 
+control 'Locale configuration' do
   title 'Test Locale configuration'
 
   def test_debian
