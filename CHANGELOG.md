@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.3](https://github.com/saltstack-formulas/locale-formula/compare/v0.3.2...v0.3.3) (2019-10-31)
+
+
+### Continuous Integration
+
+* **kitchen:** use `debian-10-master-py3` instead of `develop` [skip ci] ([](https://github.com/saltstack-formulas/locale-formula/commit/3ffe472))
+* **kitchen+travis:** upgrade matrix after `2019.2.2` release ([](https://github.com/saltstack-formulas/locale-formula/commit/a194b93))
+* **redhat:** refactor to rename `fedora` suite to `redhat` ([](https://github.com/saltstack-formulas/locale-formula/commit/11e0fdf))
+* **travis:** update `salt-lint` config for `v0.0.10` [skip ci] ([](https://github.com/saltstack-formulas/locale-formula/commit/026de4c))
+
+
+### Documentation
+
+* **contributing:** remove to use org-level file instead [skip ci] ([](https://github.com/saltstack-formulas/locale-formula/commit/0007c43))
+* **readme:** update link to `CONTRIBUTING` [skip ci] ([](https://github.com/saltstack-formulas/locale-formula/commit/95b2130))
+
 ## [0.3.2](https://github.com/saltstack-formulas/locale-formula/compare/v0.3.1...v0.3.2) (2019-10-12)
 
 
