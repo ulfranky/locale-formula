@@ -214,7 +214,7 @@ suites:
     verifier:
       inspec_tests:
         - path: test/integration/default
-  - name: fedora
+  - name: redhat
     includes:
       - fedora-30-develop-py3
       - fedora-30-2019-2-py3
@@ -231,7 +231,7 @@ suites:
             '*':
               - locale
       pillars_from_files:
-        locale.sls: test/salt/pillar/fedora.sls
+        locale.sls: test/salt/pillar/redhat.sls
     verifier:
       inspec_tests:
         - path: test/integration/default
