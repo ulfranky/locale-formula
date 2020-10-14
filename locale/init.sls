@@ -23,6 +23,21 @@ locale_present_{{ l|replace('.', '_')|replace(' ', '_') }}:
 {%- endfor %}
 
 {% if locale.default is defined %}
+dbus_for_locale:
+  pkg.installed:
+    - name: {{ locale.dbus.pkg }}
+    - require_in:
+      - locale: locale_default
+  {%- if locale.dbus.run_service %}
+  service.running:
+    - name: {{ locale.dbus.service }}
+    - enable: true
+    - require:
+      - pkg: dbus_for_locale
+    - require_in:
+      # `dbus` is required for running `localectl`
+      - locale: locale_default
+  {%- endif %}
 locale_default:
   locale.system:
     - name: {{ locale.default.name }}
