@@ -21,6 +21,12 @@ RedHat:
 Suse:
   pkgs:
     - glibc-locale
+  dbus:
+    pkg: dbus-1
+
+Gentoo:
+  dbus:
+    pkg: sys-apps/dbus
 
 Arch:
   pkgs:
