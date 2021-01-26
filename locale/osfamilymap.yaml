@@ -13,6 +13,7 @@
 Debian:
   pkgs:
     - locales
+  config: /etc/default/locale
 
 RedHat:
   pkgs:
