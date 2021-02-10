@@ -2,6 +2,24 @@
 Changelog
 =========
 
+`0.3.5 <https://github.com/saltstack-formulas/locale-formula/compare/v0.3.4...v0.3.5>`_ (2021-02-10)
+--------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **osfamilymap.yaml:** set default locale.conf path for debian (\ `978f1b1 <https://github.com/saltstack-formulas/locale-formula/commit/978f1b1ca6ae4e0f24e531ba040894ea0d20d555>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **commitlint:** ensure ``upstream/master`` uses main repo URL [skip ci] (\ `e64262f <https://github.com/saltstack-formulas/locale-formula/commit/e64262f79d37f3102dbc05ac21f527337f91c840>`_\ )
+* **gitlab-ci:** add ``rubocop`` linter (with ``allow_failure``\ ) [skip ci] (\ `b78774c <https://github.com/saltstack-formulas/locale-formula/commit/b78774c7ee9d27b5d18ce86aba98c5c929e88f88>`_\ )
+* **gitlab-ci:** use GitLab CI as Travis CI replacement (\ `ebc4255 <https://github.com/saltstack-formulas/locale-formula/commit/ebc425553a9c94022af889dd8625e776b4ffacfa>`_\ )
+* **pre-commit:** update hook for ``rubocop`` [skip ci] (\ `1cdf8d3 <https://github.com/saltstack-formulas/locale-formula/commit/1cdf8d3202c5895a3a5e7880e86517ca1707d393>`_\ )
+
 `0.3.4 <https://github.com/saltstack-formulas/locale-formula/compare/v0.3.3...v0.3.4>`_ (2020-10-14)
 --------------------------------------------------------------------------------------------------------
 
