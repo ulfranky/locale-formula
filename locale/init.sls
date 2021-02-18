@@ -7,7 +7,7 @@
 
 # Installs and configures system locales
 
-{% if locale.pkgs is iterable %}
+{% if locale.pkgs and locale.pkgs is iterable %}
 locale_pkgs:
   pkg.installed:
     - pkgs:
