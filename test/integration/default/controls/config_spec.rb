@@ -17,13 +17,13 @@ control 'Locale configuration' do
     end
   end
 
-  case os[:family]
+  case platform[:family]
   when 'debian'
     test_debian
-  when 'redhat', 'fedora'
-    test_red_hat
-  when 'suse'
-    # See: https://www.reddit.com/r/openSUSE/comments/bcwln1/how_do_i_set_the_locale_to_en_usutf8_in_an/ekuxh6j/
+  else
+    # SUSE:   https://www.reddit.com/r/openSUSE/comments/bcwln1/how_do_i_set_the_locale_to_en_usutf8_in_an/ekuxh6j/
+    # Arch:   https://wiki.archlinux.org/index.php/Locale
+    # Gentoo: https://wiki.gentoo.org/wiki/Localization/Guide
     test_red_hat
   end
 end
