@@ -334,6 +334,7 @@ suites:
       state_top:
         base:
           '*':
+            - locale._mapdata
             - locale
       pillars:
         top.sls:
@@ -372,6 +373,7 @@ suites:
       state_top:
         base:
           '*':
+            - locale._mapdata
             - locale
       pillars:
         top.sls:
